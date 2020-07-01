@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="9.5.2">
+<eagle version="9.6.2">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
 <setting keepoldvectorfont="yes"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="dots" multiple="1" display="yes" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="no" active="no"/>
@@ -120,7 +120,9 @@
 <layer number="137" name="silkbottom" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="138" name="EEE" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="139" name="_tKeepout" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="140" name="mbKeepout" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="141" name="ASSEMBLY_TOP" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="142" name="mbRestrict" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="143" name="PLACE_BOUND_TOP" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="144" name="Drill_legend" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="145" name="DrillLegend_01-16" color="7" fill="1" visible="yes" active="yes"/>
@@ -136,6 +138,12 @@
 <layer number="155" name="FabDoc3" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="166" name="AntennaArea" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="168" name="4mmHeightArea" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="191" name="mNets" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="192" name="mBusses" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="193" name="mPins" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="194" name="mSymbols" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="195" name="mNames" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="196" name="mValues" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="199" name="Contour" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="200" name="200bmp" color="1" fill="10" visible="no" active="no"/>
 <layer number="201" name="201bmp" color="7" fill="1" visible="no" active="yes"/>
@@ -229,6 +237,99 @@ DIN A3, landscape with location and doc. field</description>
 </deviceset>
 </devicesets>
 </library>
+<library name="eventHorizon" urn="urn:adsk.eagle:library:19971871">
+<packages>
+<package name="GY-521" urn="urn:adsk.eagle:footprint:20004604/3" library_version="102">
+<pad name="SDA" x="-6.3975" y="1.2025" drill="0.8" diameter="1.778"/>
+<pad name="XDA" x="-6.3975" y="-1.3375" drill="0.8" diameter="1.778"/>
+<pad name="SCL" x="-6.3975" y="3.7425" drill="0.8" diameter="1.778"/>
+<pad name="GND" x="-6.3975" y="6.2825" drill="0.8" diameter="1.778"/>
+<pad name="VCC" x="-6.3975" y="8.8225" drill="0.8" diameter="1.778"/>
+<pad name="XCL" x="-6.3975" y="-3.8775" drill="0.8" diameter="1.778"/>
+<pad name="ADO" x="-6.3975" y="-6.4175" drill="0.8" diameter="1.778"/>
+<pad name="INT" x="-6.3975" y="-8.9575" drill="0.8" diameter="1.778"/>
+<text x="0.5" y="-9.25" size="1.27" layer="21" font="vector">x</text>
+<text x="-3.5" y="-5.25" size="1.27" layer="21" font="vector">y</text>
+<wire x1="-8" y1="-10.25" x2="8" y2="-10.25" width="0.127" layer="21"/>
+<wire x1="8" y1="-10.25" x2="8" y2="10.25" width="0.127" layer="21"/>
+<wire x1="-8" y1="-10.25" x2="-8" y2="10.25" width="0.127" layer="21"/>
+<wire x1="-8" y1="10.25" x2="8" y2="10.25" width="0.127" layer="21"/>
+<wire x1="-4" y1="-6.75" x2="-2" y2="-6.75" width="0.127" layer="21" curve="100"/>
+<wire x1="-1" y1="-7.75" x2="-1" y2="-9.75" width="0.127" layer="21" curve="100"/>
+<wire x1="-3" y1="-8.75" x2="-3" y2="-5.75" width="0.127" layer="21"/>
+<wire x1="-3" y1="-8.75" x2="0" y2="-8.75" width="0.127" layer="21"/>
+<wire x1="-3.5" y1="-6.25" x2="-3" y2="-5.75" width="0.127" layer="21"/>
+<wire x1="-3" y1="-5.75" x2="-2.5" y2="-6.25" width="0.127" layer="21"/>
+<wire x1="-0.5" y1="-8.25" x2="0" y2="-8.75" width="0.127" layer="21"/>
+<wire x1="0" y1="-8.75" x2="-0.5" y2="-9.25" width="0.127" layer="21"/>
+<wire x1="-2.5" y1="-6.75" x2="-2" y2="-6.75" width="0.127" layer="21"/>
+<wire x1="-2" y1="-6.75" x2="-2" y2="-7.25" width="0.127" layer="21"/>
+<wire x1="-1.5" y1="-9.75" x2="-1" y2="-9.75" width="0.127" layer="21"/>
+<wire x1="-1" y1="-9.75" x2="-1" y2="-9.25" width="0.127" layer="21"/>
+</package>
+</packages>
+<packages3d>
+<package3d name="GY-521" urn="urn:adsk.eagle:package:20004605/5" type="model" library_version="102">
+<packageinstances>
+<packageinstance name="GY-521"/>
+</packageinstances>
+</package3d>
+</packages3d>
+<symbols>
+<symbol name="MPU6050" urn="urn:adsk.eagle:symbol:20004603/1" library_version="102">
+<wire x1="-10.16" y1="17.78" x2="-10.16" y2="-22.86" width="0.6096" layer="94"/>
+<wire x1="-10.16" y1="-22.86" x2="17.78" y2="-22.86" width="0.6096" layer="94"/>
+<wire x1="17.78" y1="-22.86" x2="17.78" y2="17.78" width="0.6096" layer="94"/>
+<wire x1="17.78" y1="17.78" x2="-10.16" y2="17.78" width="0.6096" layer="94"/>
+<wire x1="2.54" y1="-20.32" x2="7.62" y2="-20.32" width="0.3048" layer="94"/>
+<wire x1="7.62" y1="-20.32" x2="6.35" y2="-19.05" width="0.3048" layer="94"/>
+<wire x1="7.62" y1="-20.32" x2="6.35" y2="-21.59" width="0.3048" layer="94"/>
+<wire x1="2.54" y1="-20.32" x2="2.54" y2="-15.24" width="0.3048" layer="94"/>
+<wire x1="2.54" y1="-15.24" x2="1.27" y2="-16.51" width="0.3048" layer="94"/>
+<wire x1="2.54" y1="-15.24" x2="3.81" y2="-16.51" width="0.3048" layer="94"/>
+<text x="13.716" y="-9.398" size="1.778" layer="94" rot="R270">GY-521</text>
+<text x="15.24" y="-7.62" size="1.778" layer="94" rot="R90">ITG/MPU</text>
+<text x="8.89" y="-21.082" size="1.778" layer="94">x</text>
+<text x="5.08" y="-15.24" size="1.778" layer="94">y</text>
+<text x="-1.524" y="14.732" size="1.778" layer="94">3.3V (or 5v)</text>
+<pin name="VCC" x="-15.24" y="15.24" length="middle"/>
+<pin name="GND" x="-15.24" y="10.16" length="middle"/>
+<pin name="SCL" x="-15.24" y="5.08" length="middle"/>
+<pin name="SDA" x="-15.24" y="0" length="middle"/>
+<pin name="XDA" x="-15.24" y="-5.08" length="middle"/>
+<pin name="XCL" x="-15.24" y="-10.16" length="middle"/>
+<pin name="ADO" x="-15.24" y="-15.24" length="middle"/>
+<pin name="INT" x="-15.24" y="-20.32" length="middle"/>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="GY-521" urn="urn:adsk.eagle:component:20004606/4" prefix="U" library_version="102">
+<gates>
+<gate name="G$1" symbol="MPU6050" x="-2.54" y="5.08"/>
+</gates>
+<devices>
+<device name="MPU6050" package="GY-521">
+<connects>
+<connect gate="G$1" pin="ADO" pad="ADO"/>
+<connect gate="G$1" pin="GND" pad="GND"/>
+<connect gate="G$1" pin="INT" pad="INT"/>
+<connect gate="G$1" pin="SCL" pad="SCL"/>
+<connect gate="G$1" pin="SDA" pad="SDA"/>
+<connect gate="G$1" pin="VCC" pad="VCC"/>
+<connect gate="G$1" pin="XCL" pad="XCL"/>
+<connect gate="G$1" pin="XDA" pad="XDA"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:20004605/5"/>
+</package3dinstances>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -249,6 +350,7 @@ DIN A3, landscape with location and doc. field</description>
 </classes>
 <parts>
 <part name="FRAME1" library="frames" library_urn="urn:adsk.eagle:library:229" deviceset="A3L-LOC" device=""/>
+<part name="U1" library="eventHorizon" library_urn="urn:adsk.eagle:library:19971871" deviceset="GY-521" device="MPU6050" package3d_urn="urn:adsk.eagle:package:20004605/5"/>
 </parts>
 <sheets>
 <sheet>
@@ -260,6 +362,7 @@ DIN A3, landscape with location and doc. field</description>
 <attribute name="LAST_DATE_TIME" x="344.17" y="10.16" size="2.286" layer="94"/>
 <attribute name="SHEET" x="357.505" y="5.08" size="2.54" layer="94"/>
 </instance>
+<instance part="U1" gate="G$1" x="99.06" y="177.8" smashed="yes"/>
 </instances>
 <busses>
 </busses>
@@ -279,6 +382,11 @@ with this version.
 Since Version 8.3, EAGLE supports URNs for individual library
 assets (packages, symbols, and devices). The URNs of those assets
 will not be understood (or retained) with this version.
+</note>
+<note version="8.3" severity="warning">
+Since Version 8.3, EAGLE supports the association of 3D packages
+with devices in libraries, schematics, and board files. Those 3D
+packages will not be understood (or retained) with this version.
 </note>
 </compatibility>
 </eagle>
